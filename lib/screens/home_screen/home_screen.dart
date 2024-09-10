@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pocketplanner/Utils/Colors.dart';
 import 'package:pocketplanner/Utils/text_style.dart';
+import 'package:pocketplanner/screens/home_screen/components/add_transaction.dart';
 import 'package:pocketplanner/screens/home_screen/components/profile_section.dart';
 import 'package:pocketplanner/screens/home_screen/components/recent_transations.dart';
 
@@ -12,13 +13,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
           onPressed: () {
-            //
+            showModalBottomSheet<void>(
+              isScrollControlled: true,
+              context: context,
+              builder: (BuildContext context) {
+                return transactionAdd();
+              },
+            );
           },
-          child: Icon(
+          backgroundColor: PocketPlannerColors.defaultGreenColor,
+          child: const Icon(
             Icons.add,
             color: Colors.white,
-          ),
-          backgroundColor: PocketPlannerColors.defaultGreenColor),
+          )),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

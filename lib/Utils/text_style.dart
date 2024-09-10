@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PocketPlannerStyle {
+  static const TextStyle AddTransactionHeadingTextSize =
+      TextStyle(fontWeight: FontWeight.w500);
   static const TextStyle normalTextSize = TextStyle(
     fontSize: 18,
     color: Colors.white,
