@@ -3,7 +3,6 @@ import 'package:pocketplanner/Utils/Colors.dart';
 import 'package:pocketplanner/Utils/mediaquery.dart';
 import 'package:pocketplanner/Utils/text_style.dart';
 
-// ignore: camel_case_types
 class transactionAdd extends StatefulWidget {
   const transactionAdd({
     super.key,
@@ -157,31 +156,33 @@ class _transactionAddState extends State<transactionAdd> {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               ElevatedButton(
                   style: ButtonStyle(
-                    foregroundColor:
-                        WidgetStateProperty.all<Color>(Colors.white),
-                    backgroundColor: WidgetStateProperty.all<Color>( PocketPlannerColors.defaultGreenColor),
-                    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                      const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.zero,
-                        side: BorderSide(
-                            color: PocketPlannerColors.defaultGreenColor),
+                      // foregroundColor:
+                      //     WidgetStateProperty.all<Color>(Colors.white),
+                      // backgroundColor: WidgetStateProperty.all<Color>(
+                      //     PocketPlannerColors.defaultGreenColor),
+                      // shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                      //   const RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.zero,
+                      //     side: BorderSide(
+                      //         color: PocketPlannerColors.defaultGreenColor),
+                      //   ),
+                      //  ),
                       ),
-                    ),
-                  ),
                   onPressed: () => null,
                   child: Text("Save".toUpperCase(),
                       style: const TextStyle(fontSize: 14))),
               const SizedBox(width: 10),
               TextButton(
-                  style: ButtonStyle(
-                      padding: WidgetStateProperty.all<EdgeInsets>(
-                          const EdgeInsets.all(12)),
-                      foregroundColor:
-                          WidgetStateProperty.all<Color>(Colors.red),
-                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: const BorderSide(color: Colors.red)))),
+                  style: const ButtonStyle(
+                      // padding: WidgetStateProperty.all<EdgeInsets>(
+                      //     const EdgeInsets.all(12)),
+                      // foregroundColor:
+                      //     WidgetStateProperty.all<Color>(Colors.red),
+                      // shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                      //     RoundedRectangleBorder(
+                      //         borderRadius: BorderRadius.circular(18.0),
+                      //         side: const BorderSide(color: Colors.red)))
+                      ),
                   onPressed: () => null,
                   child: Text("Cancel".toUpperCase(),
                       style: const TextStyle(fontSize: 14))),
